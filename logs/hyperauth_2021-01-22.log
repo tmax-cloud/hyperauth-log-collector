@@ -1,0 +1,844 @@
+Added 'admin' to '/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json', restart server to load user
+-Dorg.jboss.as.logging.per-deployment=false
+=========================================================================
+
+  Using PostgreSQL database
+
+=========================================================================
+
+[0m16:03:48,484 INFO  [org.jboss.modules] (CLI command executor) JBoss Modules version 1.10.1.Final
+[0m[0m16:03:48,601 INFO  [org.jboss.msc] (CLI command executor) JBoss MSC version 1.4.11.Final
+[0m[0m16:03:48,606 INFO  [org.jboss.threads] (CLI command executor) JBoss Threads version 2.3.3.Final
+[0m[0m16:03:48,974 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) starting
+[0m[0m16:03:49,275 INFO  [org.jboss.vfs] (MSC service thread 1-1) VFS000002: Failed to clean existing content for temp file provider of type temp. Enable DEBUG level log to find what caused this
+[0m[0m16:03:52,882 INFO  [org.wildfly.security] (ServerService Thread Pool -- 19) ELY00001: WildFly Elytron version 1.12.1.Final
+[0m[0m16:03:56,504 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[33m16:03:58,277 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-2) WFLYELY00023: KeyStore file '/opt/jboss/keycloak/standalone/configuration/keystores/https-keystore.jks' does not exist. Used blank.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-12.0.3.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[0m[0m16:03:58,491 INFO  [org.jboss.as.patching] (MSC service thread 1-2) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[0m[33m16:03:58,785 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-2) WFLYDM0111: Keystore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[0m16:03:59,596 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m16:03:59,597 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) started in 11094ms - Started 59 of 82 services (33 services are lazy, passive or on-demand)
+[0mThe batch failed with the following error: : 
+WFLYCTL0062: Composite operation failed and was rolled back. Steps that failed:
+Step: step-9
+Operation: /subsystem=datasources/jdbc-driver=postgresql:add(driver-name=postgresql, driver-module-name=org.postgresql.jdbc, driver-xa-datasource-class-name=org.postgresql.xa.PGXADataSource)
+Failure: WFLYCTL0212: Duplicate resource [
+    ("subsystem" => "datasources"),
+    ("jdbc-driver" => "postgresql")
+]
+
+[0m16:04:00,178 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0050: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) stopped in 102ms
+[0m[0m16:04:06,389 INFO  [org.jboss.modules] (CLI command executor) JBoss Modules version 1.10.1.Final
+[0m[0m16:04:06,691 INFO  [org.jboss.msc] (CLI command executor) JBoss MSC version 1.4.11.Final
+[0m[0m16:04:06,711 INFO  [org.jboss.threads] (CLI command executor) JBoss Threads version 2.3.3.Final
+[0m[0m16:04:07,192 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) starting
+[0m[0m16:04:07,495 INFO  [org.jboss.vfs] (MSC service thread 1-1) VFS000002: Failed to clean existing content for temp file provider of type temp. Enable DEBUG level log to find what caused this
+[0m[0m16:04:11,379 INFO  [org.wildfly.security] (ServerService Thread Pool -- 22) ELY00001: WildFly Elytron version 1.12.1.Final
+[0m[0m16:04:16,103 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m16:04:16,817 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m16:04:17,971 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[0m[33m16:04:18,071 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-1) WFLYDM0111: Keystore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[0m16:04:18,587 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m16:04:18,588 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) started in 12184ms - Started 56 of 86 services (39 services are lazy, passive or on-demand)
+[0mThe batch executed successfully
+[0m16:04:19,396 INFO  [org.jboss.as] (MSC service thread 1-1) WFLYSRV0050: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) stopped in 101ms
+[0mCreating HTTPS keystore via OpenShift's service serving x509 certificate secrets..
+HTTPS keystore successfully created at: /opt/jboss/keycloak/standalone/configuration/keystores/https-keystore.jks
+=========================================================================
+
+  JBoss Bootstrap Environment
+
+  JBOSS_HOME: /opt/jboss/keycloak
+
+  JAVA: java
+
+  JAVA_OPTS:  -server -Xms64m -Xmx512m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true  --add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-exports=jdk.unsupported/sun.misc=ALL-UNNAMED --add-exports=jdk.unsupported/sun.reflect=ALL-UNNAMED
+
+=========================================================================
+
+[0m16:05:02,571 INFO  [org.jboss.modules] (main) JBoss Modules version 1.10.1.Final
+[0m[0m16:05:05,101 INFO  [org.jboss.msc] (main) JBoss MSC version 1.4.11.Final
+[0m[0m16:05:05,114 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.3.Final
+[0m[0m16:05:05,600 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) starting
+[0m[0m16:05:06,178 INFO  [org.jboss.vfs] (MSC service thread 1-2) VFS000002: Failed to clean existing content for temp file provider of type temp. Enable DEBUG level log to find what caused this
+[0m[0m16:05:11,506 INFO  [org.wildfly.security] (ServerService Thread Pool -- 22) ELY00001: WildFly Elytron version 1.12.1.Final
+[0m[0m16:05:15,896 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+[0m[0m16:05:18,596 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 4) WFLYDR0001: Content added at location /opt/jboss/keycloak/standalone/data/content/4d/2e23160a3e32f5e9cb92ad55ac4949de37cc23/content
+[0m[0m16:05:18,617 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+[0m[0m16:05:18,693 INFO  [org.xnio] (MSC service thread 1-2) XNIO version 3.8.1.Final
+[0m[0m16:05:18,772 INFO  [org.xnio.nio] (MSC service thread 1-2) XNIO NIO Implementation Version 3.8.1.Final
+[0m[0m16:05:19,279 INFO  [org.jboss.remoting] (MSC service thread 1-1) JBoss Remoting version 5.0.18.Final
+[0m[0m16:05:19,384 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 39) WFLYCLINF0001: Activating Infinispan subsystem.
+[0m[0m16:05:19,374 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 40) WFLYIO001: Worker 'default' has auto-configured to 2 IO threads with 16 max task threads based on your 1 available processors
+[0m[0m16:05:19,475 INFO  [org.jboss.as.clustering.jgroups] (ServerService Thread Pool -- 43) WFLYCLJG0001: Activating JGroups subsystem. JGroups version 4.2.4
+[0m[0m16:05:19,582 INFO  [org.wildfly.extension.microprofile.config.smallrye._private] (ServerService Thread Pool -- 48) WFLYCONF0001: Activating WildFly MicroProfile Config Subsystem
+[0m[0m16:05:19,680 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 52) WFLYNAM0001: Activating Naming Subsystem
+[0m[0m16:05:19,872 INFO  [org.jboss.as.connector] (MSC service thread 1-1) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.22.Final)
+[0m[0m16:05:19,976 INFO  [org.wildfly.extension.microprofile.metrics.smallrye] (ServerService Thread Pool -- 50) WFLYMETRICS0001: Activating Eclipse MicroProfile Metrics Subsystem
+[0m[0m16:05:19,976 INFO  [org.wildfly.extension.microprofile.health.smallrye] (ServerService Thread Pool -- 49) WFLYHEALTH0001: Activating Eclipse MicroProfile Health Subsystem
+[0m[0m16:05:19,779 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 41) WFLYRS0016: RESTEasy version 3.12.1.Final
+[0m[0m16:05:20,207 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 55) WFLYSEC0002: Activating Security Subsystem
+[0m[0m16:05:19,983 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 34) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+[0m[33m16:05:20,072 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 57) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+[0m[0m16:05:20,772 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 34) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.2)
+[0m[33m16:05:21,180 WARN  [org.wildfly.clustering.web.undertow] (ServerService Thread Pool -- 58) WFLYCLWEBUT0007: No routing provider found for default-server; using legacy provider based on static configuration
+[0m[0m16:05:21,283 INFO  [org.jboss.as.security] (MSC service thread 1-2) WFLYSEC0001: Current PicketBox version=5.0.3.Final-redhat-00005
+[0m[0m16:05:22,076 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0003: Undertow 2.1.3.Final starting
+[0m[0m16:05:22,184 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = h2
+[0m[0m16:05:22,186 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0018: Started Driver service with driver-name = postgresql
+[0m[0m16:05:22,271 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 58) WFLYUT0014: Creating file handler for path '/opt/jboss/keycloak/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+[0m[0m16:05:22,381 INFO  [org.jboss.as.naming] (MSC service thread 1-1) WFLYNAM0003: Starting Naming Service
+[0m[0m16:05:22,573 INFO  [org.jboss.as.ejb3] (MSC service thread 1-2) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 16 (per class), which is derived from thread worker pool sizing.
+[0m[0m16:05:22,573 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 4 (per class), which is derived from the number of CPUs on this host.
+[0m[0m16:05:23,279 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-2) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+[0m[0m16:05:26,187 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+[0m[0m16:05:26,684 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0018: Host default-host starting
+[0m[0m16:05:26,981 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow AJP listener ajp listening on 10.244.200.211:8009
+[0m[0m16:05:27,279 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on 10.244.200.211:8080
+[0m[0m16:05:27,389 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0493: EJB subsystem suspension complete
+[0m[0m16:05:27,391 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 60) MODCLUSTER000001: Initializing mod_cluster version 1.4.1.Final
+[0m[0m16:05:27,475 INFO  [org.jboss.modcluster] (ServerService Thread Pool -- 60) MODCLUSTER000032: Listening to proxy advertisements on /224.0.1.105:23364
+[0m[0m16:05:27,772 INFO  [org.jboss.as.patching] (MSC service thread 1-1) WFLYPAT0050: Keycloak cumulative patch ID is: base, one-off patches include: none
+[0m[33m16:05:27,994 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-1) WFLYDM0111: Keystore /opt/jboss/keycloak/standalone/configuration/application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+[0m[0m16:05:28,573 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) WFLYSRV0027: Starting deployment of "hyperauth-spi.jar" (runtime-name: "hyperauth-spi.jar")
+[0m[0m16:05:28,573 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "keycloak-server.war" (runtime-name: "keycloak-server.war")
+[0m[0m16:05:28,581 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory /opt/jboss/keycloak/standalone/deployments
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.wildfly.extension.elytron.SSLDefinitions (jar:file:/opt/jboss/keycloak/modules/system/layers/base/org/wildfly/extension/elytron/main/wildfly-elytron-integration-12.0.3.Final.jar!/) to method com.sun.net.ssl.internal.ssl.Provider.isFIPS()
+WARNING: Please consider reporting this to the maintainers of org.wildfly.extension.elytron.SSLDefinitions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[0m[0m16:05:29,574 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+[0m[0m16:05:29,575 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) WFLYJCA0001: Bound data source [java:jboss/datasources/KeycloakDS]
+[0m[0m16:05:29,688 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTPS listener https listening on 10.244.200.211:8443
+[0m[33m16:05:32,171 WARN  [org.jboss.as.logging] (MSC service thread 1-2) WFLYLOG0015: The per-logging deployment property (org.jboss.as.logging.per-deployment) has been deprecated. Please use the use-deployment-logging-config attribute to enable/disable per-deployment logging.
+[0m[33m16:05:37,000 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-1) WFLYSRV0018: Deployment "deployment.hyperauth-spi.jar" is using a private module ("org.keycloak.keycloak-server-spi-private") which may be changed or removed in future versions without notice.
+[0m[33m16:05:37,001 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-1) WFLYSRV0018: Deployment "deployment.hyperauth-spi.jar" is using a private module ("org.keycloak.keycloak-services") which may be changed or removed in future versions without notice.
+[0m[33m16:05:37,091 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-1) WFLYSRV0018: Deployment "deployment.hyperauth-spi.jar" is using a private module ("org.keycloak.keycloak-saml-core-public") which may be changed or removed in future versions without notice.
+[0m[33m16:05:37,102 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-1) WFLYSRV0018: Deployment "deployment.hyperauth-spi.jar" is using a private module ("org.keycloak.keycloak-model-jpa") which may be changed or removed in future versions without notice.
+[0m[0m16:05:37,107 INFO  [org.keycloak.subsystem.server.extension.KeycloakProviderDeploymentProcessor] (MSC service thread 1-1) Deploying Keycloak provider: hyperauth-spi.jar
+[0m[33m16:05:37,173 WARN  [org.jboss.as.logging] (MSC service thread 1-1) WFLYLOG0015: The per-logging deployment property (org.jboss.as.logging.per-deployment) has been deprecated. Please use the use-deployment-logging-config attribute to enable/disable per-deployment logging.
+[0m[0m16:05:37,196 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0004: Deploying JDBC-compliant driver class com.tmax.tibero.jdbc.TbDriver (version 6.0)
+[0m[0m16:05:37,282 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = hyperauth-spi.jar
+[0m[0m16:05:37,697 INFO  [org.jgroups.protocols.pbcast.GMS] (ServerService Thread Pool -- 60) hyperauth-696d744c48-xczlz: no members discovered after 3008 ms: creating cluster as coordinator
+[0m[0m16:05:39,596 INFO  [org.infinispan.PERSISTENCE] (MSC service thread 1-2) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[0m[0m16:05:39,596 INFO  [org.infinispan.PERSISTENCE] (MSC service thread 1-1) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[0m[0m16:05:39,772 INFO  [org.infinispan.CONTAINER] (MSC service thread 1-2) ISPN000128: Infinispan version: Infinispan 'Turia' 10.1.8.Final
+[0m[0m16:05:40,702 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000078: Starting JGroups channel ejb
+[0m[0m16:05:40,770 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-1) ISPN000078: Starting JGroups channel ejb
+[0m[0m16:05:40,780 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-1) ISPN000094: Received new cluster view for channel ejb: [hyperauth-696d744c48-xczlz|0] (1) [hyperauth-696d744c48-xczlz]
+[0m[0m16:05:40,780 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000094: Received new cluster view for channel ejb: [hyperauth-696d744c48-xczlz|0] (1) [hyperauth-696d744c48-xczlz]
+[0m[0m16:05:40,794 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-1) ISPN000079: Channel ejb local address is hyperauth-696d744c48-xczlz, physical addresses are [10.244.200.211:55200]
+[0m[0m16:05:40,794 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000079: Channel ejb local address is hyperauth-696d744c48-xczlz, physical addresses are [10.244.200.211:55200]
+[0m[0m16:05:41,178 INFO  [org.infinispan.PERSISTENCE] (MSC service thread 1-2) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[0m[0m16:05:41,191 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000078: Starting JGroups channel ejb
+[0m[0m16:05:41,192 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000094: Received new cluster view for channel ejb: [hyperauth-696d744c48-xczlz|0] (1) [hyperauth-696d744c48-xczlz]
+[0m[0m16:05:41,194 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000079: Channel ejb local address is hyperauth-696d744c48-xczlz, physical addresses are [10.244.200.211:55200]
+[0m[0m16:05:41,285 INFO  [org.infinispan.PERSISTENCE] (MSC service thread 1-2) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[0m[0m16:05:41,290 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000078: Starting JGroups channel ejb
+[0m[0m16:05:41,290 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000094: Received new cluster view for channel ejb: [hyperauth-696d744c48-xczlz|0] (1) [hyperauth-696d744c48-xczlz]
+[0m[0m16:05:41,291 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000079: Channel ejb local address is hyperauth-696d744c48-xczlz, physical addresses are [10.244.200.211:55200]
+[0m[0m16:05:43,472 INFO  [org.infinispan.PERSISTENCE] (MSC service thread 1-2) ISPN000556: Starting user marshaller 'org.wildfly.clustering.infinispan.marshalling.jboss.JBossMarshaller'
+[0m[0m16:05:43,476 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000078: Starting JGroups channel ejb
+[0m[0m16:05:43,476 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000094: Received new cluster view for channel ejb: [hyperauth-696d744c48-xczlz|0] (1) [hyperauth-696d744c48-xczlz]
+[0m[0m16:05:43,478 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 65) WFLYCLINF0002: Started sessions cache from keycloak container
+[0m[0m16:05:43,478 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 63) WFLYCLINF0002: Started clientSessions cache from keycloak container
+[0m[0m16:05:43,478 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 64) WFLYCLINF0002: Started actionTokens cache from keycloak container
+[0m[0m16:05:43,483 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 71) WFLYCLINF0002: Started work cache from keycloak container
+[0m[0m16:05:43,484 INFO  [org.infinispan.CLUSTER] (MSC service thread 1-2) ISPN000079: Channel ejb local address is hyperauth-696d744c48-xczlz, physical addresses are [10.244.200.211:55200]
+[0m[0m16:05:43,572 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0002: Started offlineSessions cache from keycloak container
+[0m[0m16:05:43,572 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 60) WFLYCLINF0002: Started offlineClientSessions cache from keycloak container
+[0m[0m16:05:43,573 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 72) WFLYCLINF0002: Started loginFailures cache from keycloak container
+[0m[0m16:05:43,585 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 69) WFLYCLINF0002: Started authenticationSessions cache from keycloak container
+[0m[0m16:05:43,883 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 70) WFLYCLINF0002: Started authorization cache from keycloak container
+[0m[0m16:05:43,883 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 68) WFLYCLINF0002: Started keys cache from keycloak container
+[0m[0m16:05:43,884 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 67) WFLYCLINF0002: Started realms cache from keycloak container
+[0m[0m16:05:43,884 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 73) WFLYCLINF0002: Started users cache from keycloak container
+[0m[0m16:05:44,197 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 69) WFLYCLINF0002: Started client-mappings cache from ejb container
+[0m[33m16:05:44,606 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0273: Excluded subsystem webservices via jboss-deployment-structure.xml does not exist.
+[0m[0m16:05:46,683 INFO  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0001: Loading config from standalone.xml or domain.xml
+[0m[0m16:05:47,891 INFO  [org.keycloak.url.DefaultHostnameProviderFactory] (ServerService Thread Pool -- 73) Frontend: <request>, Admin: <frontend>, Backend: <request>
+[0m[33m16:05:47,977 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: secret_question_config (com.tmax.hyperauth.authenticator.secretQuestion.SecretQuestionRequiredActionFactory) is implementing the internal SPI required-action. This SPI is internal and may change without notice
+[0m[33m16:05:47,982 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: hyperauth-entity-provider (com.tmax.hyperauth.jpa.HyperauthJpaEntityProviderFactory) is implementing the internal SPI jpa-entity-provider. This SPI is internal and may change without notice
+[0m[33m16:05:47,992 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: user (com.tmax.hyperauth.rest.UserProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:47,993 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: agreement (com.tmax.hyperauth.rest.AgreementProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:47,993 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: sms (com.tmax.hyperauth.rest.SMSCodeProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:47,993 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: email (com.tmax.hyperauth.rest.EmailProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:47,994 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: password (com.tmax.hyperauth.rest.PasswordProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:47,994 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: groupMember (com.tmax.hyperauth.rest.GroupMemberProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:47,994 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: session (com.tmax.hyperauth.rest.SessionProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:47,994 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: test (com.tmax.hyperauth.rest.TestProviderFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+[0m[33m16:05:48,000 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: hyperauth_event_listener (com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProviderFactory) is implementing the internal SPI eventsListener. This SPI is internal and may change without notice
+[0m[33m16:05:48,003 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: secret-question (com.tmax.hyperauth.authenticator.secretQuestion.SecretQuestionCredentialProviderFactory) is implementing the internal SPI credential. This SPI is internal and may change without notice
+[0m[33m16:05:48,085 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: bcrypt (com.tmax.hyperauth.passwordhash.BCryptPasswordHashProviderFactory) is implementing the internal SPI password-hashing. This SPI is internal and may change without notice
+[0m[33m16:05:48,089 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: naver-user-attribute-mapper (com.tmax.hyperauth.identity.naver.NaverUserAttributeMapper) is implementing the internal SPI identity-provider-mapper. This SPI is internal and may change without notice
+[0m[33m16:05:48,089 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: kakao-user-attribute-mapper (com.tmax.hyperauth.identity.kakao.KakaoUserAttributeMapper) is implementing the internal SPI identity-provider-mapper. This SPI is internal and may change without notice
+[0m[33m16:05:48,098 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: tmax-phone-validation (com.tmax.hyperauth.register.PhoneValidationForm) is implementing the internal SPI form-action. This SPI is internal and may change without notice
+[0m[33m16:05:48,106 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: secret-question-authenticator (com.tmax.hyperauth.authenticator.secretQuestion.SecretQuestionAuthenticatorFactory) is implementing the internal SPI authenticator. This SPI is internal and may change without notice
+[0m[33m16:05:48,106 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: security-policy-authenticator  (com.tmax.hyperauth.authenticator.securityPolicy.SecurityPolicyAuthenticatorFactory) is implementing the internal SPI authenticator. This SPI is internal and may change without notice
+[0m[33m16:05:48,106 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: email-otp-authenticator  (com.tmax.hyperauth.authenticator.otp.EmailOTPAuthenticatorFactory) is implementing the internal SPI authenticator. This SPI is internal and may change without notice
+[0m[33m16:05:48,173 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: naver (com.tmax.hyperauth.identity.naver.NaverIdentityProviderFactory) is implementing the internal SPI social. This SPI is internal and may change without notice
+[0m[33m16:05:48,174 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0047: kakao (com.tmax.hyperauth.identity.kakao.KakaoIdentityProviderFactory) is implementing the internal SPI social. This SPI is internal and may change without notice
+[0m[0m16:05:48,206 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 73) WFLYCLINF0002: Started realmRevisions cache from keycloak container
+[0m[0m16:05:48,208 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 73) WFLYCLINF0002: Started userRevisions cache from keycloak container
+[0m[0m16:05:48,272 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 73) WFLYCLINF0002: Started authorizationRevisions cache from keycloak container
+[0m[0m16:05:48,273 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (ServerService Thread Pool -- 73) Node name: hyperauth-696d744c48-xczlz, Site name: null
+[0m[0m16:05:48,379 INFO  [org.quartz.impl.StdSchedulerFactory] (ServerService Thread Pool -- 73) Using default implementation for ThreadExecutor
+[0m[0m16:05:48,381 INFO  [org.quartz.simpl.SimpleThreadPool] (ServerService Thread Pool -- 73) Job execution threads will use class loader of thread: ServerService Thread Pool -- 73
+[0m[0m16:05:48,392 INFO  [org.quartz.core.SchedulerSignalerImpl] (ServerService Thread Pool -- 73) Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[0m[0m16:05:48,392 INFO  [org.quartz.core.QuartzScheduler] (ServerService Thread Pool -- 73) Quartz Scheduler v.2.3.2 created.
+[0m[0m16:05:48,393 INFO  [org.quartz.simpl.RAMJobStore] (ServerService Thread Pool -- 73) RAMJobStore initialized.
+[0m[0m16:05:48,393 INFO  [org.quartz.core.QuartzScheduler] (ServerService Thread Pool -- 73) Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[0m[0m16:05:48,394 INFO  [org.quartz.impl.StdSchedulerFactory] (ServerService Thread Pool -- 73) Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[0m[0m16:05:48,394 INFO  [org.quartz.impl.StdSchedulerFactory] (ServerService Thread Pool -- 73) Quartz scheduler version: 2.3.2
+[0m[0m16:05:48,394 INFO  [org.quartz.core.QuartzScheduler] (ServerService Thread Pool -- 73) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+[0m[0m16:05:56,979 INFO  [org.hibernate.jpa.internal.util.LogHelper] (ServerService Thread Pool -- 73) HHH000204: Processing PersistenceUnitInfo [
+	name: keycloak-default
+	...]
+[0m[0m16:05:57,012 INFO  [org.hibernate.Version] (ServerService Thread Pool -- 73) HHH000412: Hibernate Core {5.3.17.Final}
+[0m[0m16:05:57,013 INFO  [org.hibernate.cfg.Environment] (ServerService Thread Pool -- 73) HHH000206: hibernate.properties not found
+[0m[0m16:05:57,401 INFO  [org.hibernate.annotations.common.Version] (ServerService Thread Pool -- 73) HCANN000001: Hibernate Commons Annotations {5.0.5.Final}
+[0m[0m16:05:57,817 INFO  [org.hibernate.dialect.Dialect] (ServerService Thread Pool -- 73) HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+[0m[0m16:05:58,449 INFO  [org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl] (ServerService Thread Pool -- 73) HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[0m[0m16:05:58,472 INFO  [org.hibernate.type.BasicTypeRegistry] (ServerService Thread Pool -- 73) HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2401f46
+[0m[0m16:05:58,475 INFO  [org.hibernate.envers.boot.internal.EnversServiceImpl] (ServerService Thread Pool -- 73) Envers integration enabled? : true
+[0m[0m16:05:59,930 INFO  [org.hibernate.orm.beans] (ServerService Thread Pool -- 73) HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[0m[0m16:05:59,993 INFO  [org.hibernate.validator.internal.util.Version] (ServerService Thread Pool -- 73) HV000001: Hibernate Validator 6.0.20.Final
+[0m[0m16:06:04,528 INFO  [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator] (ServerService Thread Pool -- 73) HHH000397: Using ASTQueryTranslatorFactory
+[0m[0m16:06:07,683 INFO  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0006: Importing users from '/opt/jboss/keycloak/standalone/configuration/keycloak-add-user.json'
+[0m[33m16:06:08,217 WARN  [org.keycloak.services] (ServerService Thread Pool -- 73) KC-SERVICES0104: Not creating user admin. It already exists.
+[0m[0m16:06:08,293 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002225: Deploying javax.ws.rs.core.Application: class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,295 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002205: Adding provider class org.keycloak.services.error.KeycloakErrorHandler from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,297 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002200: Adding class resource org.keycloak.services.resources.JsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,298 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002200: Adding class resource org.keycloak.services.resources.ThemeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,299 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002205: Adding provider class org.keycloak.services.filters.KeycloakSecurityHeadersFilter from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,299 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.WelcomeResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,300 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RobotsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,300 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.RealmsResource from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,300 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002210: Adding provider singleton org.keycloak.services.util.ObjectMapperResolver from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,300 INFO  [org.jboss.resteasy.resteasy_jaxrs.i18n] (ServerService Thread Pool -- 73) RESTEASY002220: Adding singleton resource org.keycloak.services.resources.admin.AdminRoot from Application class org.keycloak.services.resources.KeycloakApplication
+[0m[0m16:06:08,394 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 73) WFLYUT0021: Registered web context: '/auth' for server 'default-server'
+[0m[0m16:06:08,692 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 35) WFLYSRV0010: Deployed "hyperauth-spi.jar" (runtime-name : "hyperauth-spi.jar")
+[0m[0m16:06:08,693 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 46) WFLYSRV0010: Deployed "keycloak-server.war" (runtime-name : "keycloak-server.war")
+[0m[0m16:06:09,284 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+[0m[0m16:06:09,289 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: Keycloak 11.0.2 (WildFly Core 12.0.3.Final) started in 68507ms - Started 735 of 1041 services (706 services are lazy, passive or on-demand)
+[0m[0m16:06:09,292 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+[0m[0m16:06:09,292 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+[0m[0m16:16:28,379 INFO  [stdout] (default task-3) return EmailOTP ConfigProperties 
+[0m[0m16:16:28,380 INFO  [stdout] (default task-3) return Secret ConfigProperties 
+[0m[0m16:18:11,483 INFO  [stdout] (default task-5) Admin Event Occurred:operationType=DELETE, realmId=master, clientId=9dda2120-4510-4af0-8934-ee1c31e608cd, userId=c00d95e1-98f6-49ae-9cc1-e16cee1eac47, ipAddress=192.168.6.107, resourcePath=identity-provider/instances/kakao
+[0m[0m16:58:31,319 INFO  [stdout] (default task-6) otpEnabled From Attribute : null, user [ admin@tmax.co.kr ]
+[0m[0m16:58:31,319 INFO  [stdout] (default task-6) Bypassing OTP Authenticator since user [ admin@tmax.co.kr ] has not set OTP Authenticator
+[0m[0m16:58:31,380 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-6) Event Occurred:type=LOGIN, realmId=tmax, clientId=hypercloud4, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=756ca322-1c4b-4211-8c10-4820e209f7b6, time=1611388711374, auth_method=openid-connect, auth_type=code, redirect_uri=https://172.22.6.2:31304/status/all-namespaces, consent=no_consent_required, code_id=756ca322-1c4b-4211-8c10-4820e209f7b6, username=admin@tmax.co.kr
+[0m[0m16:58:31,475 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-6) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m16:58:31,702 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka version: 2.6.0
+[0m[0m16:58:31,702 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka commitId: 62abe01bee039651
+[0m[0m16:58:31,703 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka startTimeMs: 1611388711698
+[0m[0m16:58:32,351 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-1) [Producer clientId=producer-1] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m16:58:32,438 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-128) [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m16:58:32,619 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-6) Event Occurred:type=CODE_TO_TOKEN, realmId=tmax, clientId=hypercloud4, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=756ca322-1c4b-4211-8c10-4820e209f7b6, time=1611388712619, token_id=3a474535-f3b1-4b74-b09f-14f44a9cbb8e, grant_type=authorization_code, refresh_token_type=Refresh, scope='openid kubernetes registry email profile group isAdmin', refresh_token_id=c9ab5c36-630f-4579-9585-dc7b1dd86d9a, code_id=756ca322-1c4b-4211-8c10-4820e209f7b6, client_auth_method=client-secret
+[0m[0m16:58:32,619 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-6) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m16:58:32,625 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka version: 2.6.0
+[0m[0m16:58:32,625 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka commitId: 62abe01bee039651
+[0m[0m16:58:32,625 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka startTimeMs: 1611388712625
+[0m[0m16:58:32,684 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-2) [Producer clientId=producer-2] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m16:58:32,704 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-129) [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m17:01:50,393 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-6) Event Occurred:type=LOGOUT, realmId=tmax, clientId=null, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=756ca322-1c4b-4211-8c10-4820e209f7b6, time=1611388910393, redirect_uri=https://172.22.6.2:31304?first
+[0m[0m17:01:50,394 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-6) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-3
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m17:01:50,403 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka version: 2.6.0
+[0m[0m17:01:50,403 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka commitId: 62abe01bee039651
+[0m[0m17:01:50,403 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-6) Kafka startTimeMs: 1611388910403
+[0m[0m17:01:50,499 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-3) [Producer clientId=producer-3] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m17:01:50,600 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-130) [Producer clientId=producer-3] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m17:01:56,135 INFO  [stdout] (default task-18) otpEnabled From Attribute : null, user [ admin@tmax.co.kr ]
+[0m[0m17:01:56,136 INFO  [stdout] (default task-18) Bypassing OTP Authenticator since user [ admin@tmax.co.kr ] has not set OTP Authenticator
+[0m[0m17:01:56,138 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-18) Event Occurred:type=LOGIN, realmId=tmax, clientId=hypercloud4, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=d6ab18ae-a11f-4578-8b61-3682fe523bc8, time=1611388916138, auth_method=openid-connect, auth_type=code, redirect_uri=https://172.22.6.2:31304/?first, consent=no_consent_required, code_id=d6ab18ae-a11f-4578-8b61-3682fe523bc8, username=admin@tmax.co.kr
+[0m[0m17:01:56,139 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-18) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-4
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m17:01:56,144 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka version: 2.6.0
+[0m[0m17:01:56,144 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka commitId: 62abe01bee039651
+[0m[0m17:01:56,144 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka startTimeMs: 1611388916143
+[0m[0m17:01:56,290 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-4) [Producer clientId=producer-4] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m17:01:56,308 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-131) [Producer clientId=producer-4] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m17:01:56,966 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-18) Event Occurred:type=CODE_TO_TOKEN, realmId=tmax, clientId=hypercloud4, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=d6ab18ae-a11f-4578-8b61-3682fe523bc8, time=1611388916966, token_id=afcd2115-c708-4ef6-ae87-be74700e9ae6, grant_type=authorization_code, refresh_token_type=Refresh, scope='openid kubernetes registry email profile group isAdmin', refresh_token_id=3bf49081-c96e-4105-a2e6-2e5125c848c7, code_id=d6ab18ae-a11f-4578-8b61-3682fe523bc8, client_auth_method=client-secret
+[0m[0m17:01:56,967 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-18) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-5
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m17:01:56,972 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka version: 2.6.0
+[0m[0m17:01:56,972 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka commitId: 62abe01bee039651
+[0m[0m17:01:56,972 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka startTimeMs: 1611388916972
+[0m[0m17:01:57,007 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-5) [Producer clientId=producer-5] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m17:01:57,070 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-132) [Producer clientId=producer-5] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m17:01:57,648 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-18) Event Occurred:type=LOGIN, realmId=tmax, clientId=hypercloud4, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=d6ab18ae-a11f-4578-8b61-3682fe523bc8, time=1611388917647, auth_method=openid-connect, auth_type=code, response_type=code, redirect_uri=https://172.22.6.2:31304/, consent=no_consent_required, code_id=d6ab18ae-a11f-4578-8b61-3682fe523bc8, response_mode=fragment, username=admin@tmax.co.kr
+[0m[0m17:01:57,649 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-18) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-6
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m17:01:57,660 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka version: 2.6.0
+[0m[0m17:01:57,661 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka commitId: 62abe01bee039651
+[0m[0m17:01:57,661 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka startTimeMs: 1611388917660
+[0m[0m17:01:57,693 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-6) [Producer clientId=producer-6] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m17:01:57,711 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-133) [Producer clientId=producer-6] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m17:01:58,035 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-18) Event Occurred:type=CODE_TO_TOKEN, realmId=tmax, clientId=hypercloud4, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=d6ab18ae-a11f-4578-8b61-3682fe523bc8, time=1611388918034, token_id=38c74746-3957-489e-a038-a9c429c84b50, grant_type=authorization_code, refresh_token_type=Refresh, scope='openid kubernetes registry email profile group isAdmin', refresh_token_id=b127b2cc-aa8b-48c8-a942-c704de1d895f, code_id=d6ab18ae-a11f-4578-8b61-3682fe523bc8, client_auth_method=client-secret
+[0m[0m17:01:58,036 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-18) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-7
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m17:01:58,045 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka version: 2.6.0
+[0m[0m17:01:58,045 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka commitId: 62abe01bee039651
+[0m[0m17:01:58,045 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka startTimeMs: 1611388918045
+[0m[0m17:01:58,096 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-7) [Producer clientId=producer-7] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m17:01:58,113 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-134) [Producer clientId=producer-7] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m17:02:02,451 INFO  [com.tmax.hyperauth.eventlistener.provider.HyperauthEventListenerProvider] (default task-18) Event Occurred:type=LOGOUT, realmId=tmax, clientId=null, userId=3c2f0ab5-5c6e-4739-b9db-877ebcfbcd29, ipAddress=192.168.6.107, sessionId=d6ab18ae-a11f-4578-8b61-3682fe523bc8, time=1611388922451, redirect_uri=https://172.22.6.2:31304?first
+[0m[0m17:02:02,451 INFO  [org.apache.kafka.clients.producer.ProducerConfig] (default task-18) ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [kafka-1.hyperauth:9092, kafka-2.hyperauth:9092, kafka-3.hyperauth:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-8
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = /etc/x509/kafka/hyperauth.keystore.jks
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = /etc/x509/kafka/hyperauth.truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[0m[0m17:02:02,454 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka version: 2.6.0
+[0m[0m17:02:02,454 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka commitId: 62abe01bee039651
+[0m[0m17:02:02,455 INFO  [org.apache.kafka.common.utils.AppInfoParser] (default task-18) Kafka startTimeMs: 1611388922454
+[0m[0m17:02:02,483 INFO  [org.apache.kafka.clients.Metadata] (kafka-producer-network-thread | producer-8) [Producer clientId=producer-8] Cluster ID: oLfUg2qVQRGOyeGus8SRQQ
+[0m[0m17:02:02,499 INFO  [org.apache.kafka.clients.producer.KafkaProducer] (Thread-135) [Producer clientId=producer-8] Closing the Kafka producer with timeoutMillis = 9223372036854775807 ms.
+[0m[0m17:02:18,072 INFO  [stdout] (default task-20) return EmailOTP ConfigProperties 
+[0m[0m17:02:18,072 INFO  [stdout] (default task-20) return Secret ConfigProperties 
+[0m[0m00:00:00,008 INFO  [stdout] (DefaultQuartzScheduler_Worker-1)  [UserDelete Job] User Deletion Job Start !! 
+[0m[0m00:00:00,008 INFO  [stdout] (DefaultQuartzScheduler_Worker-1) Now : Sun Jan 24 00:00:00 KST 2021
+[0m[0m00:00:00,065 INFO  [stdout] (DefaultQuartzScheduler_Worker-1)  [HyperAuth] Login as Admin Service
+[0m[0m00:00:00,083 INFO  [stdout] (DefaultQuartzScheduler_Worker-1)  [UserDelete Job] HyperAuth Not Ready yet 
+[0m[0m00:00:00,083 INFO  [stdout] (DefaultQuartzScheduler_Worker-1)  [UserDelete Job] User Deletion Job Finish !! 

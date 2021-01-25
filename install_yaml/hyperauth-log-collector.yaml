@@ -17,8 +17,6 @@ spec:
       labels:
         hyperauth: log
     spec:
-      # nodeSelector:
-      #   kubernetes.io/hostname: ck-2 # need to be changed per Env
       #imagePullSecrets:
       #  - name : docker-pull-secret
       serviceAccount: hyperauth-admin
@@ -29,6 +27,8 @@ spec:
         env:
         - name: TZ
           value: Asia/Seoul
+        - name: NAMESPACE
+          value: "hyperauth"
         volumeMounts:
         - name: log
           mountPath: /go/src/logs

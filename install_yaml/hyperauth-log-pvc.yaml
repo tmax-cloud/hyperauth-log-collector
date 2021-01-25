@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: hyperauth-log-pvc
+  namespace: hyperauth
+  labels:
+    hyperauth: log
+spec:
+  storageClassName: csi-cephfs-sc
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi

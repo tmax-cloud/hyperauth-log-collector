@@ -17,12 +17,12 @@ spec:
       labels:
         hyperauth: log
     spec:
-      #imagePullSecrets:
-      #  - name : docker-pull-secret
+      imagePullSecrets:
+      - name : docker-pull-secret
       serviceAccount: hyperauth-admin
       containers:
       - name: log-collector
-        image: tmaxcloudck/hyperauth-log-collector:b0.0.0.1
+        image: tmaxcloudck/hyperauth-log-collector:b0.0.0.8
         imagePullPolicy: Always
         env:
         - name: TZ
@@ -32,6 +32,8 @@ spec:
         volumeMounts:
         - name: log
           mountPath: /go/src/logs
+        - name: build
+          mountPath: /go/src/build
         resources:
           limits:
             cpu: "0.1"
@@ -41,5 +43,8 @@ spec:
             memory: "128Mi"
       volumes:
       - name: log
-        persistentVolumeClaim:
-          claimName: hyperauth-log-pvc
+        hostPath:
+          path: /root/keycloak/hyperauth-log-collector/logs
+      - name: build
+        hostPath:
+          path: /root/keycloak/hyperauth-log-collector/build 

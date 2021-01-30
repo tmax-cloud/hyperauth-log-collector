@@ -1,5 +1,0 @@
-[0m[0m00:00:00,004 INFO  [stdout] (DefaultQuartzScheduler_Worker-2)  [UserDelete Job] User Deletion Job Start !! 
-[0m[0m00:00:00,005 INFO  [stdout] (DefaultQuartzScheduler_Worker-2) Now : Mon Jan 25 00:00:00 KST 2021
-[0m[0m00:00:00,005 INFO  [stdout] (DefaultQuartzScheduler_Worker-2)  [HyperAuth] Login as Admin Service
-[0m[0m00:00:00,008 INFO  [stdout] (DefaultQuartzScheduler_Worker-2)  [UserDelete Job] HyperAuth Not Ready yet 
-[0m[0m00:00:00,008 INFO  [stdout] (DefaultQuartzScheduler_Worker-2)  [UserDelete Job] User Deletion Job Finish !! 

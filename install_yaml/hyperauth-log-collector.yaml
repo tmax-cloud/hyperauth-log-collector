@@ -17,6 +17,8 @@ spec:
       labels:
         hyperauth: log
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: ck4-1
       imagePullSecrets:
       - name : docker-pull-secret
       serviceAccount: hyperauth-admin

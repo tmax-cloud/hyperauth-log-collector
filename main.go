@@ -6,8 +6,6 @@ import (
 	"io"
 	"io/ioutil"
 	"os"
-	"strconv"
-	"strings"
 	"time"
 
 	"github.com/robfig/cron"
@@ -40,9 +38,22 @@ func init() {
 
 func main() {
 	klog.Info("Hyperauth Log Collector Start!!")
+	file1, _ := os.OpenFile(
+		"./logs/hyperauth_1.log",
+		os.O_CREATE|os.O_RDWR,
+		os.FileMode(0644),
+	)
+	defer file1.Close()
+
+	file2, _ := os.OpenFile(
+		"./logs/hyperauth_2.log",
+		os.O_CREATE|os.O_RDWR,
+		os.FileMode(0644),
+	)
+	defer file2.Close()
 
 	cronJobTail := cron.New()
-	cronJobTail.AddFunc("@every 5s", func() { //test code
+	cronJobTail.AddFunc("@every 5s", func() {
 		nsName := os.Getenv("NAMESPACE")
 		klog.Info("nsName : " + nsName)
 		key := "app"
@@ -54,24 +65,25 @@ func main() {
 				LabelSelector: labels.Set(labelSelector.MatchLabels).String(),
 			},
 		)
-		for i, item := range pod.Items {
-			klog.Info("Hyperauth Pod Name : " + item.Name)
-			file, _ := os.OpenFile(
-				"./logs/hyperauth_"+strconv.Itoa(i+1)+".log",
-				os.O_CREATE|os.O_RDWR|os.O_TRUNC,
-				os.FileMode(0644),
-			)
-			defer file.Close()
 
-			// Call k8s readPodLogs
-			logString := getPodLog(nsName, item.Name)
-			_, err := file.WriteString(logString)
+		if pod.Items != nil && len(pod.Items) > 0 {
+			podName1 := pod.Items[0].Name
+			klog.Info("Hyperauth Pod 1 Name : " + podName1)
+			logString1 := getPodLog(nsName, podName1)
+			_, err := file1.WriteString(logString1)
 			if err != nil {
 				klog.Error(err)
 			}
-			i++
+			if len(pod.Items) > 1 {
+				podName2 := pod.Items[1].Name
+				klog.Info("Hyperauth Pod 2 Name : " + podName2)
+				logString2 := getPodLog(nsName, podName2)
+				_, err = file2.WriteString(logString2)
+				if err != nil {
+					klog.Error(err)
+				}
+			}
 		}
-
 	})
 	cronJobTail.Start()
 
@@ -82,43 +94,43 @@ func main() {
 	cronJobCollect.AddFunc("1 0 0 * * ?", func() { //every day 0am
 		now := time.Now()
 		klog.Info("Hyperauth Log Collector Start to Collect, " + "Current Time : " + now.Format("2006-01-02 15:04:05"))
-		files, err := ioutil.ReadDir("./logs")
-		if err != nil {
-			klog.Error(err)
+		input1, err1 := ioutil.ReadFile(file1.Name())
+		if err1 != nil {
+			klog.Error(err1)
 			return
 		}
+		os.Mkdir("./logs/1", 0755)
 
-		i := 1
-		for _, file := range files {
-			if strings.HasPrefix(file.Name(), "hyperauth_") && strings.HasSuffix(file.Name(), ".log") {
-				klog.Info("file name : " + file.Name())
-				file, _ := os.OpenFile(
-					file.Name(),
-					os.O_CREATE|os.O_RDWR|os.O_TRUNC,
-					os.FileMode(0644),
-				)
-				defer file.Close()
-				input, err := ioutil.ReadFile(file.Name())
-				if err != nil {
-					klog.Error(err)
-					return
-				}
-				os.Mkdir("./logs/"+strconv.Itoa(i), 0755)
-
-				err = ioutil.WriteFile("./logs/"+strconv.Itoa(i)+"/hyperauth_"+strconv.Itoa(i)+"_"+now.AddDate(0, 0, -1).Format("2006-01-02")+".log", input, 0644)
-				// err = ioutil.WriteFile("./logs/"+strconv.Itoa(i)+"/hyperauth_"+strconv.Itoa(i)+"_"+now.Add(time.Minute*(-1)).Format("2006-01-02 15:04:05")+".log", input, 0644) //test code
-
-				if err != nil {
-					klog.Error(err)
-					return
-				}
-				klog.Info("Log BackUp Success Write file , " + strconv.Itoa(i) + "/hyperauth_" + strconv.Itoa(i) + "_" + now.AddDate(0, 0, -1).Format("2006-01-02") + ".log , Current Time : " + now.Format("2006-01-02 15:04:05"))
-				file.Truncate(0)
-				// os.Truncate("./logs/hyperauth.log", 0)
-				file.Seek(0, os.SEEK_SET)
-				i++
-			}
+		input2, err2 := ioutil.ReadFile(file2.Name())
+		if err2 != nil {
+			klog.Error(err2)
+			return
 		}
+		os.Mkdir("./logs/2", 0755)
+
+		err1 = ioutil.WriteFile("./logs/1/hyperauth_1_"+now.AddDate(0, 0, -1).Format("2006-01-02")+".log", input1, 0644)
+		err2 = ioutil.WriteFile("./logs/2/hyperauth_2_"+now.AddDate(0, 0, -1).Format("2006-01-02")+".log", input2, 0644)
+
+		// err1 = ioutil.WriteFile("./logs/1/hyperauth_1_"+now.Add(time.Minute*(-1)).Format("2006-01-02 15:04:05")+".log", input1, 0644) //test code
+		// err2 = ioutil.WriteFile("./logs/2/hyperauth_2_"+now.Add(time.Minute*(-1)).Format("2006-01-02 15:04:05")+".log", input2, 0644) //test code
+
+		if err1 != nil {
+			klog.Error(err1)
+			return
+		}
+		if err2 != nil {
+			klog.Error(err2)
+			return
+		}
+		klog.Info("Log BackUp Success Write file , 1/hyperauth_1_" + now.AddDate(0, 0, -1).Format("2006-01-02") + ".log , Current Time : " + now.Format("2006-01-02 15:04:05"))
+		klog.Info("Log BackUp Success Write file , 2/hyperauth_2_" + now.AddDate(0, 0, -1).Format("2006-01-02") + ".log , Current Time : " + now.Format("2006-01-02 15:04:05"))
+
+		file1.Truncate(0)
+		file2.Truncate(0)
+
+		// os.Truncate("./logs/hyperauth.log", 0)
+		file1.Seek(0, os.SEEK_SET)
+		file2.Seek(0, os.SEEK_SET)
 	})
 	cronJobCollect.Start()
 
@@ -128,7 +140,6 @@ func main() {
 }
 
 func getPodLog(nsName string, podName string) string {
-
 	podLogOpts := v1.PodLogOptions{
 		Container: "hyperauth", // in case, Collector is in same pod with hyperauth
 		// Follow:    true,
@@ -156,21 +167,4 @@ func getPodLog(nsName string, podName string) string {
 	klog.Info(" << Hyperauth Log " + time.Now().Format("2006-01-02 15:04:05") + " >>")
 	klog.Info(str)
 	return str
-}
-
-func getPodNameWithLabel(nsName string, key string, value string) string {
-	labelSelector := metav1.LabelSelector{MatchLabels: map[string]string{key: value}}
-	pod, _ := Clientset.CoreV1().Pods(nsName).List(
-		context.TODO(),
-		metav1.ListOptions{
-			LabelSelector: labels.Set(labelSelector.MatchLabels).String(),
-		},
-	)
-	for _, item := range pod.Items {
-		klog.Info("pod item : " + item.Name)
-	}
-
-	podName := pod.Items[0].ObjectMeta.Name
-	klog.Info("Hyperauth PodName : " + podName)
-	return podName
 }
